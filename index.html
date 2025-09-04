@@ -84,56 +84,51 @@
   </head>
   <body class="p-6 md:p-12">
     <h1 class="text-2xl font-bold text-gray-800 mb-6 text-center">HW2 Problem 2</h1>
-      <div id="name-section">
-        <input type="text" id="username" placeholder="Enter your name" />
-        <button id="submitName">Submit</button>
+    <div class="w-full max-w-md mx-auto my-8">
+      <div id="name-section" class="flex items-center gap-2 p-2 bg-white rounded shadow">
+        <input type="text" id="username" placeholder="Your name" class="border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-1/2 text-center text-sm" />
+        <button id="submitName" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition text-sm font-medium">Submit</button>
+        <div id="score1" class="score ml-8 text-center text-base font-medium text-green-700 rounded py-1">Score: 0</div>
       </div>
-	  <div id="score1" class="score">Score: 0</div>
+    </div>
     <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-xl shadow-lg">
       <h2 class="pb-4">Consider a system of horizonal rods connected at the following nodes:</h2>
       <h2></h2>
       <div id="table-container-nodes" class="overflow-x-auto mb-8"></div>
       <h2 class="pb-4">The rods have the following properties:</h2>
       <div id="table-container-rods" class="overflow-x-auto"></div>
-      <h2 id="forceDisplay" class="mb-4 py-4">The system is loaded by forces F1=sss and F2=ddd</h2>
+
       <div class="mt-8 mb-8 text-center">
-        <button id="regenerateButton" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition ease-in-out duration-150">Generate New Values</button>
+        <button id="regenerateButton" class="hidden bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition ease-in-out duration-150">Generate New Values</button>
       </div>
 
-
-<h1 class="text-2xl font-bold text-center text-gray-800 mb-6">Dynamic Figure Drawing</h1>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end mb-6">
-  <div>
-    <label for="l1" class="block text-sm font-medium text-gray-700">L1</label>
-    <input type="number" id="l1" min="10" max="400"
-      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" />
-  </div>
-  <div>
-    <label for="l2" class="block text-sm font-medium text-gray-700">L2</label>
-    <input type="number" id="l2" min="10" max="400"
-      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" />
-  </div>
-  <div>
-    <label for="l5" class="block text-sm font-medium text-gray-700">L5</label>
-    <input type="number" id="l5" min="10" max="400"
-      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" />
-  </div>
-  <div>
-    <label for="f1" class="block text-sm font-medium text-gray-700">F1 (N)</label>
-    <input type="number" id="f1" value="-1000"
-      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" />
-  </div>
-  <div>
-    <label for="f2" class="block text-sm font-medium text-gray-700">F2 (N)</label>
-    <input type="number" id="f2" value="2000"
-      class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition ease-in-out duration-150" />
-  </div>
-  <button id="drawButton"
-    class="w-full bg-white-600 hover:bg-white-700 text-white font-semibold py-2 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition ease-in-out duration-150">
-    Draw Figure
-  </button>
-</div>
-
+      <!-- <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">Dynamic Figure Drawing</h1> -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end mb-6">
+        <div>
+          <label for="l1" class="block text-sm font-medium text-gray-700">L1</label>
+          <input type="number" id="l1" min="10" max="400" readonly class="bg-gray-100 mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" />
+        </div>
+        <div>
+          <label for="l2" class="block text-sm font-medium text-gray-700">L2</label>
+          <input type="number" id="l2" min="10" max="400" readonly class="bg-gray-100 mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" />
+        </div>
+        <div>
+          <label for="l5" class="block text-sm font-medium text-gray-700">L5</label>
+          <input type="number" id="l5" readonly min="10" max="400" class="bg-gray-100 mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" />
+        </div>
+      </div>
+      <h2 id="forceDisplay" class="mb-4 py-4">The system is loaded by forces F1=sss and F2=ddd</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end mb-6">
+        <div>
+          <label for="f1" class="block text-sm font-medium text-gray-700">F1 (N)</label>
+          <input type="number" id="f1" readonly value="-1000" class="bg-gray-100 mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" />
+        </div>
+        <div>
+          <label for="f2" class="block text-sm font-medium text-gray-700">F2 (N)</label>
+          <input type="number" id="f2" readonly value="2000" class="bg-gray-100 mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition ease-in-out duration-150" />
+        </div>
+        <button id="drawButton" class="hidden w-full bg-white-600 hover:bg-white-700 text-white font-semibold py-2 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition ease-in-out duration-150">Draw Figure</button>
+      </div>
 
       <div class="canvas-container">
         <canvas id="drawingCanvas"></canvas>
@@ -213,7 +208,7 @@
       <button id="closeMessage" class="mt-4 w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md shadow-md">Close</button>
     </div>
     <script>
-     // Name submission functionality
+      // Name submission functionality
       document.getElementById("submitName").addEventListener("click", function () {
         const nameInput = document.getElementById("username")
         const submitButton = document.getElementById("submitName")
@@ -222,38 +217,40 @@
           alert("Please enter your name before submitting.")
           return
         }
-		
+
         nameInput.readOnly = true
-        submitButton.disabled = true   
+        submitButton.disabled = true
+        submitButton.classList.add("hidden")
+        nameInput.classList.add("bg-gray-100")
       })
-    let kRand= getRandomInteger(100, 400);
-    document.getElementById("l1").value = getRandomInteger(kRand, 400);
-    document.getElementById("l2").value = kRand;
-    document.getElementById("l5").value = getRandomInteger(100, 300);
- 
+      let kRand = getRandomInteger(100, 400)
+      document.getElementById("l1").value = getRandomInteger(kRand, 400)
+      document.getElementById("l2").value = kRand
+      document.getElementById("l5").value = getRandomInteger(100, 300)
+
       // Global variables to store the generated rod properties and state
       //
       let iSolution = {
-        connectivityTable: 1,
-        lengthAndStiffness: 1,
-        globalStiffness: 1,
-        loadVector: 1,
-        reducedStiffness: 1,
-        reducedLoadVector: 1,
-        inversedStiffness: 1,
-        unknownDisplacements: 1,
-        fullDisplacements: 1,
+        connectivityTable: 0,
+        lengthAndStiffness: 0,
+        globalStiffness: 0,
+        loadVector: 0,
+        reducedStiffness: 0,
+        reducedLoadVector: 0,
+        inversedStiffness: 0,
+        unknownDisplacements: 0,
+        fullDisplacements: 0,
         finalSteps: 0
       }
-const iScore =1;
-const scoreElement = document.getElementById('score1');
-let score1=0; 
+      const iScore = 1
+      const scoreElement = document.getElementById("score1")
+      let score1 = 0
 
-// Check if the element exists and if the score is 0
-if (scoreElement && iScore === 0) {
-  // If the condition is true, hide the element
-  scoreElement.style.display = 'none';
-}
+      // Check if the element exists and if the score is 0
+      if (scoreElement && iScore === 0) {
+        // If the condition is true, hide the element
+        scoreElement.style.display = "none"
+      }
       let globalLengths = []
       let globalAreas = []
       let globalStiffnesses = []
@@ -266,24 +263,24 @@ if (scoreElement && iScore === 0) {
         [0, 0, 0, 0]
       ]
       let iFixed = getRandomInteger(0, 2) // The fixed node index (Node 1 is at index 0)
-	  let iForce1Pos=getRandomInteger(0, 2)
-	  if(iForce1Pos==iFixed) iForce1Pos=iForce1Pos+1
-	  
+      let iForce1Pos = getRandomInteger(0, 2)
+      if (iForce1Pos == iFixed) iForce1Pos = iForce1Pos + 1
+
       let currentElementIndex = 0
       const totalElements = 5
-	  function getRandomInteger(min, max) {
-    /**
-     * Generates a random integer between min and max (inclusive).
-     * @param {number} min - The minimum value (inclusive).
-     * @param {number} max - The maximum value (inclusive).
-     * @returns {number} A random integer.
-     */
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+      function getRandomInteger(min, max) {
+        /**
+         * Generates a random integer between min and max (inclusive).
+         * @param {number} min - The minimum value (inclusive).
+         * @param {number} max - The maximum value (inclusive).
+         * @returns {number} A random integer.
+         */
+        return Math.floor(Math.random() * (max - min + 1)) + min
+      }
       let forceF1 = getRandomInteger(-800, 500) // Initial value for F1
       let forceF2 = getRandomInteger(200, 2000) // Initial value for F2
-	  document.getElementById("f1").value=forceF1
-	  document.getElementById("f2").value=forceF2
+      document.getElementById("f1").value = forceF1
+      document.getElementById("f2").value = forceF2
       let globalLoads = [0, 0, 0, 0] // Load vector
       let globalDisplacements = [] // To store the full displacement vector
 
@@ -321,11 +318,11 @@ if (scoreElement && iScore === 0) {
         const elementLoadVector = document.getElementById("element-load-vector")
         const elementStress = document.getElementById("element-stress")
         const checkConnectivityButton = document.getElementById("checkConnectivityButton")
-		function setRandomLengths() {
-		document.getElementById("l1").value = getRandomInteger(10, 400);
-		document.getElementById("l2").value = getRandomInteger(10, 400);
-		document.getElementById("l5").value = getRandomInteger(10, 400);
-  }
+        function setRandomLengths() {
+          document.getElementById("l1").value = getRandomInteger(10, 400)
+          document.getElementById("l2").value = getRandomInteger(10, 400)
+          document.getElementById("l5").value = getRandomInteger(10, 400)
+        }
         const l1Input = document.getElementById("l1")
         const l2Input = document.getElementById("l2")
         const l5Input = document.getElementById("l5")
@@ -598,8 +595,8 @@ if (scoreElement && iScore === 0) {
             nextStepInfoContainer.classList.remove("hidden")
             nextStepButtonContainer.classList.remove("hidden")
             document.getElementById("checkConnectivityButton").style.display = "none"
-		score1 = 2 
-			updateScore1()	
+            score1 = 2
+            updateScore1()
           } else {
             showMessage("Some values are incorrect. Please try again.")
           }
@@ -736,8 +733,8 @@ if (scoreElement && iScore === 0) {
               }
               if (isCorrect) {
                 showMessage("Correct! The calculations are accurate. \nProceed to the next step.")
-				score1 = score1+2 
-				updateScore1()
+                score1 = score1 + 2
+                updateScore1()
                 //Remove later
                 if (iSolution.globalStiffness != 0) {
                   nextStepButton.disabled = false
@@ -890,8 +887,8 @@ if (scoreElement && iScore === 0) {
 
           if (allCorrect) {
             showMessage("The Global Stiffness Matrix is correct! \nYou may now proceed to the next steps.")
-			score1 = score1+2 
-			updateScore1()
+            score1 = score1 + 2
+            updateScore1()
 
             // Hide the check button and show the next-step button
             document.getElementById("checkMatrixButton").style.display = "none"
@@ -921,20 +918,20 @@ if (scoreElement && iScore === 0) {
         }
 
         //Load Vector
-	function validateInput(input) {
-  const val = input.value.trim();
-  if (val === "" || val.toUpperCase() === "R") {
-    input.classList.remove("border-red-500");
-  } else if (!/^-?\d*\.?\d*$/.test(val)) {
-    input.classList.add("border-red-500"); // invalid
-  } else {
-    input.classList.remove("border-red-500");
-  }
-}
+        function validateInput(input) {
+          const val = input.value.trim()
+          if (val === "" || val.toUpperCase() === "R") {
+            input.classList.remove("border-red-500")
+          } else if (!/^-?\d*\.?\d*$/.test(val)) {
+            input.classList.add("border-red-500") // invalid
+          } else {
+            input.classList.remove("border-red-500")
+          }
+        }
         const displayLoadVector = () => {
           globalLoads = [0, 0, 0, forceF2]
-		  globalLoads[iFixed]='R'
-		  globalLoads[iForce1Pos]=forceF1
+          globalLoads[iFixed] = "R"
+          globalLoads[iForce1Pos] = forceF1
           if (iSolution.loadVector === 1) {
             loadVectorContainer.classList.remove("hidden")
 
@@ -972,9 +969,7 @@ if (scoreElement && iScore === 0) {
             </div>`
 
             let matrixHtml = `<h2 class="text-xl font-bold text-gray-800 mb-4">Enter values of the Load Vector components . If unknow, enter "R"</h2>`
-			
-			
-	
+
             matrixHtml += `<div class="mx-auto p-4 bg-gray-100 rounded-lg overflow-x-auto">
             <table class="min-w-full divide-y divide-gray-200"><tbody>`
 
@@ -993,36 +988,35 @@ if (scoreElement && iScore === 0) {
             }
           }
         }
-		
 
         const checkLoadVector = () => {
           let allValues = true
           let allCorrect = true
 
           for (let j = 0; j < 4; j++) {
-		    if (j!==iFixed) {
-            const inputElement = document.getElementById(`v-${j}`)
-            const inputValue = parseFloat(inputElement.value)
-            const correctValue = globalLoads[j]
+            if (j !== iFixed) {
+              const inputElement = document.getElementById(`v-${j}`)
+              const inputValue = parseFloat(inputElement.value)
+              const correctValue = globalLoads[j]
 
-            inputElement.classList.remove("red-text")
+              inputElement.classList.remove("red-text")
 
-            if (isNaN(inputValue)) {
-              allValues = false
-              allCorrect = false
-            }
-            //-- CHANGE TOLERANCE IF NEEDED -- Load Vector
-            if (Math.abs(inputValue - correctValue) > 1e-2) {
-              inputElement.classList.add("red-text")
-              allCorrect = false
+              if (isNaN(inputValue)) {
+                allValues = false
+                allCorrect = false
+              }
+              //-- CHANGE TOLERANCE IF NEEDED -- Load Vector
+              if (Math.abs(inputValue - correctValue) > 1e-2) {
+                inputElement.classList.add("red-text")
+                allCorrect = false
+              }
             }
           }
-		  }
 
           if (allCorrect) {
             showMessage("The Load Vector is correct! \nYou may now proceed to the next steps.")
-					score1 = score1+2
-		updateScore1()
+            score1 = score1 + 2
+            updateScore1()
 
             // Hide the check button and show the next-step button
             document.getElementById("checkVectorButton").style.display = "none"
@@ -1149,8 +1143,8 @@ if (scoreElement && iScore === 0) {
 
           if (allCorrect) {
             showMessage("The Reduced Stiffness Matrix is correct! \nYou may now proceed to the next steps.")
-			score1 = score1+2
-			updateScore1()
+            score1 = score1 + 2
+            updateScore1()
 
             // Hide the check button and show the next-step button
             document.getElementById("checkReducedMatrixButton").style.display = "none"
@@ -1277,8 +1271,8 @@ if (scoreElement && iScore === 0) {
 
           if (allCorrect) {
             showMessage("The Reduced Load Vector is correct! \nYou may now proceed to the next steps.")
-						score1 = score1+1
-			updateScore1()
+            score1 = score1 + 1
+            updateScore1()
 
             // Hide the check button and show the next-step button
             document.getElementById("checkLoadVectorButton").style.display = "none"
@@ -1361,10 +1355,7 @@ if (scoreElement && iScore === 0) {
             [(f * g - d * i) * invDeterminant, (a * i - c * g) * invDeterminant, (c * d - a * f) * invDeterminant],
             [(d * h - e * g) * invDeterminant, (b * g - a * h) * invDeterminant, (a * e - b * d) * invDeterminant]
           ]
-console.log("Inversed Stiffness Matrix:");
-inversedMatrix.forEach(row => {
-  console.log(row.map(val => val.toExponential(4).padStart(8)).join(" "));
-});
+
           // Store the inversed matrix globally to be used for the next step
           window.inversedMatrix = inversedMatrix
 
@@ -1442,8 +1433,8 @@ inversedMatrix.forEach(row => {
 
           if (allCorrect) {
             showMessage("The Inversed Stiffness Matrix is correct! \nYou may now proceed to the next steps.")
-		score1 = score1+2
-		updateScore1()
+            score1 = score1 + 2
+            updateScore1()
             // Hide the check button and show the next-step button
             document.getElementById("checkInversedMatrixButton").style.display = "none"
             nextStepButtonContainer.classList.remove("hidden")
@@ -1564,8 +1555,6 @@ inversedMatrix.forEach(row => {
             const inputElement = document.getElementById(`ud-${j}`)
             const inputValue = parseFloat(inputElement.value)
             const correctValue = window.unknownDisplacements[j]
-            //remove later
-            console.log(correctValue)
 
             inputElement.classList.remove("red-text")
 
@@ -1582,8 +1571,8 @@ inversedMatrix.forEach(row => {
 
           if (allCorrect) {
             showMessage("The Unknown Displacements Vector is correct! \nYou may now proceed to the next steps.")
-		score1 = score1+2
-		updateScore1()
+            score1 = score1 + 2
+            updateScore1()
             // Hide the check button and show the next-step button
             document.getElementById("checkDisplacementsButton").style.display = "none"
             let matrixHtml = `<h2 class="text-xl font-bold text-gray-800 mb-4">Unknown Displacements
@@ -1696,8 +1685,6 @@ inversedMatrix.forEach(row => {
             const inputElement = document.getElementById(`fd-${j}`)
             const inputValue = parseFloat(inputElement.value)
             const correctValue = fullDisplacements[j]
-            //remove later
-            console.log(correctValue)
 
             inputElement.classList.remove("red-text")
 
@@ -1714,8 +1701,8 @@ inversedMatrix.forEach(row => {
 
           if (allCorrect) {
             showMessage("The Full Displacement Vector is correct! \nYou may now proceed to the next steps.")
-			score1 = score1+1
-		    updateScore1()
+            score1 = score1 + 1
+            updateScore1()
             resultsNextStepButton.disabled = false
             resultsNextStepButton.classList.remove("opacity-50", "cursor-not-allowed")
             // Hide the check button and show the next-step button
@@ -1757,13 +1744,8 @@ inversedMatrix.forEach(row => {
           }
         }
         const checkAllAnswers = (uvalues, fvalues, stress, elementNumber, elementData) => {
-          console.log(uvalues, fvalues, stress, elementNumber)
           let allValues = true
           let allCorrect = true
-		  
-		  console.log(uvalues)
-		  console.log(fvalues)
-		  console.log(stress)
 
           for (let j = 0; j < 2; j++) {
             const inputElement1 = document.getElementById(`nd-${elementNumber}-${j}`)
@@ -1806,8 +1788,8 @@ inversedMatrix.forEach(row => {
 
           if (allCorrect) {
             showMessage("You may now proceed to the next steps.")
-             		score1 = score1+3
-		updateScore1()
+            score1 = score1 + 3
+            updateScore1()
             // Hide the check button and show the next-step button
             document.getElementById("checkAllAnswersButton").classList.add("hidden")
             resultsNextStepButton.disabled = false
@@ -2222,16 +2204,14 @@ inversedMatrix.forEach(row => {
 
           let iFixed_index = iFixed // Node 3 is fixed, which is at index 2 in 0-indexed arrays
           let iForce1_x_pos = WALL_WIDTH
-		  if (iForce1Pos==1) iForce1_x_pos= WALL_WIDTH +  WALL_X2 
-		  if (iForce1Pos==2) iForce1_x_pos= WALL_WIDTH +  WALL_X3
+          if (iForce1Pos == 1) iForce1_x_pos = WALL_WIDTH + WALL_X2
+          if (iForce1Pos == 2) iForce1_x_pos = WALL_WIDTH + WALL_X3
           let iForce1_y_pos = bar5Y + BAR_HEIGHT / 2
 
- 
-
           let labelForce1 = "F1"
-		  let dfx = -L2F  *Math.sign(forceF1) +(1+Math.sign(forceF1))/2*L2F// / 2 
+          let dfx = -L2F * Math.sign(forceF1) + ((1 + Math.sign(forceF1)) / 2) * L2F // / 2
           // Draw F1 pointing left (negative direction)
-          drawHorizontalArrow(ctx, iForce1_x_pos + dfx, iForce1_y_pos, L2F  *Math.sign(forceF1), BAR_HEIGHT, labelForce1)
+          drawHorizontalArrow(ctx, iForce1_x_pos + dfx, iForce1_y_pos, L2F * Math.sign(forceF1), BAR_HEIGHT, labelForce1)
 
           let Support_x = [WALL_X, WALL_X2, WALL_X3, WALL_X4]
           let Support_y = [WALL_Y + WALL_HEIGHT, WALL_Y2 + WALL_HEIGHT - 3 * BAR_HEIGHT, WALL_Y3 + WALL_HEIGHT, WALL_Y4 + WALL_HEIGHT]
@@ -2258,8 +2238,7 @@ inversedMatrix.forEach(row => {
         // Function to update the force display in the h2 tag
         const updateForceDisplay = () => {
           //forceDisplay.textContent = `The system is loaded by forces F1=${f1Input.value} and F2=${f2Input.value}`
-			forceDisplay.textContent = `The system is loaded by forces F1 and F2`
-
+          forceDisplay.textContent = `The system is loaded by forces F1 and F2`
         }
 
         // Initial call to create tables and draw the figure
@@ -2289,10 +2268,9 @@ inversedMatrix.forEach(row => {
         closeMessage.addEventListener("click", hideMessage)
         window.addEventListener("resize", resizeCanvas)
       })
-	        function updateScore1() {
+      function updateScore1() {
         document.getElementById("score1").innerHTML = `Score: ${score1}`
       }
-	  
     </script>
   </body>
 </html>
